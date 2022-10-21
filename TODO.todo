@@ -1,0 +1,13 @@
+ ✔ when you click the pages button store the id and the name of the level 1 page @done (22-10-20 23:19)
+ ✔ set the schema for level 2 add and we store the id in this schema @done (22-10-21 00:33)
+ ☐ content edit page
+ ✔ addthe first page loads a blank data object in application data storage @done (22-10-20 23:52)
+ ✔ hide the data id in level 2 edit @done (22-10-20 23:52)
+ ☐ duplicate items on page post itis just checking for uid we may want it to be on the actual content 
+ ✔ update site api .js when it is working with post @done (22-10-21 00:33)
+ ✔ show correct pages for the site @done (22-10-21 11:47)
+ ✔ pass up the id to the page api call so the get works @done (22-10-21 13:21)
+ ✔ dont make page return blank, mayeb this is an issue? @done (22-10-21 14:14)
+ ✔ check the single entry for page @done (22-10-21 14:14)
+ ☐ do we require the get single item in the page api?
+ ✔ clear cacheon level 2 @done (22-10-21 14:19)

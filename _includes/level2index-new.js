@@ -22,7 +22,7 @@ whenDocumentReady(isReady = () => {
     document.getElementById('btn-create').addEventListener('click', function() {
         //api call done
         let xhrDone = (res) => {
-            addDataItem(res, 0);
+            addDataItem(2,res, 0);
             res = JSON.parse(res)
             showAlert(res.message, 1, 0);
             document.getElementById('data-header').innerHTML = "";
@@ -33,11 +33,15 @@ whenDocumentReady(isReady = () => {
         //get the form data
         let bodyJson = getFormData()
         let user = getUser()
-        bodyJson.secret = user.secret;
+        bodyJson = JSON.parse(bodyJson);
+        bodyJson.level1id = window.localStorage.level1selectedid;
+        bodyJson = JSON.stringify(bodyJson);
+        console.log('body json')
+        console.log(bodyJson);
         //check there is data to submit
         if (bodyJson != false) {
             //call it
-            xhrcall(0, `api/${dataMainMethod}/`, bodyJson, "json", "", xhrDone, token)
+            xhrcall(0, `api/${level2name}/`, bodyJson, "json", "", xhrDone, token)
         }
     })
 
